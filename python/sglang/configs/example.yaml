@@ -1,0 +1,20 @@
+model_path: Qwen/Qwen2.5-7B-Instruct
+port: 8001
+enable_lora: true
+max_loras_per_batch: 100
+lora_backend: triton
+max_lora_rank: 64
+lora_target_modules:
+  - all
+log_level: warning
+enable_hierarchical_cache: true
+hicache_size: 80
+max_total_tokens: 100000
+load_ahead_step: 2
+evict_pri_level: 4
+enable_holding: false
+enable_interrupt: false
+self_debug: false
+disable_prefetch: false
+disable_lr_pf: false
+disable_kv_pf: false
